@@ -97,7 +97,7 @@ body {
 
 /* Ajuste fino al contenedor para que quede centrado y no tape el logo */
 .contenedor {
-    margin-top: 15vh; /* Lo empuja un poco hacia abajo desde la barra flotante */
+    margin-top: 22vh; /* Lo empuja un poco hacia abajo desde la barra flotante */
     margin-left: auto; /* Fuerza el centrado */
     margin-right: auto; /* Fuerza el centrado */
     text-align: center; /* Centra los textos y botones por dentro */
