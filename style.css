@@ -1,0 +1,148 @@
+/* =========================================
+   1. RESET BÁSICO Y TIPOGRAFÍA
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* =========================================
+   2. FONDO Y RESPONSIVE (Móvil por defecto)
+   ========================================= */
+body {
+    /* La ruta indica: entra a la carpeta assets y busca el archivo fondo-koi.jpg */
+    background-image: url('assets/fondo-telefono2.jpg'); 
+    
+    /* Estos ajustes son para que la imagen cubra toda la pantalla sin repetirse */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================
+   3. BARRA DESLIZANTE SUPERIOR
+   ========================================= */
+.barra-flotante {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 100; /* Asegura que siempre esté por encima de todo */
+}
+
+.texto-deslizante {
+    display: inline-block;
+    white-space: nowrap;
+    animation: deslizar 30s linear infinite;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
+/* =========================================
+   4. CONTENEDOR CENTRAL Y MENSAJE
+   ========================================= */
+.contenedor {
+    margin-top: 100px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* =========================================
+   NUEVOS ESTILOS DE TEXTO (Estilo Metal Koi)
+   ========================================= */
+
+/* El título principal en cursiva gruesa */
+.titulo-gracias {
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    
+    /* 1. SEPARAR LÍNEAS: Sube este número para alejar los párrafos entre sí */
+    line-height: 1.4; 
+    
+    /* 2. SUBIR TODO EL BLOQUE: El valor negativo lo empuja hacia arriba */
+    margin-top: -28px; 
+    
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+
+/* El texto de los gatos abajo */
+.texto-gatos {
+    font-family: 'Bree Serif', serif; /* Cambiamos a Bree Serif */
+    font-size: 20px; /* La subí un pelín porque esta fuente lo aguanta bien */
+    color: #ffffff;
+    margin-top: 15px; 
+    font-weight: bolder; /* Bree Serif ya es gruesa por defecto */
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Ajuste fino al contenedor para que quede centrado y no tape el logo */
+.contenedor {
+    margin-top: 15vh; /* Lo empuja un poco hacia abajo desde la barra flotante */
+    margin-left: auto; /* Fuerza el centrado */
+    margin-right: auto; /* Fuerza el centrado */
+    text-align: center; /* Centra los textos y botones por dentro */
+    width: 85%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* =========================================
+   5. BOTONES Y EFECTOS FLOTANTES
+   ========================================= */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caja-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0.578); /* 2px de grosor, color blanco al 40% de opacidad */
+}
+
+/* Colores de las marcas */
+.instagram { 
+    background-color: #cc3f4a;; 
+}
+.tiktok { 
+    background-color: #cc3f4a;
+}
+.catalogo { 
+    background-color: #cc3f4a; 
+    color: #fff;
+}
+
+/* Efecto al pasar el cursor o tocar */
+.caja-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
